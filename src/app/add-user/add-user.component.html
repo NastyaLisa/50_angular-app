@@ -1,0 +1,36 @@
+<div class="body">
+  <input
+    type="text"
+    placeholder="Name"
+    [value]="nameInputValue"
+    (input)="onName($event)"
+    #name
+  />
+
+  <textarea
+    type="text"
+    placeholder="Status"
+    [value]="statusInputValue"
+    (input)="onStatus($event)"
+    #status
+  ></textarea>
+  
+  <span *ngIf="statusInputValue.length > 0">
+    {{ 50 - statusInputValue.length }} characters left
+  </span>
+
+  <input
+    type="URL"
+    placeholder="Avatar URL"
+    [value]="avatarUrlInputValue"
+    (input)="onAvatarUrl($event)"
+    #avatarUrl
+  />
+
+  <button
+    type="button"
+    (click)="addNewUser(name.value, status.value, avatarUrl.value)"
+  >
+    Add user
+  </button>
+</div>

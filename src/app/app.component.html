@@ -1,0 +1,9 @@
+<main>
+  <app-add-user (onUser) ="addUser($event)" ></app-add-user>
+  <app-user 
+  [name]="user.name" 
+  [status]="user.status" 
+  [avatarUrl]="user.avatarUrl"
+  (removeUser)="removeUser()"
+  ></app-user>
+</main>

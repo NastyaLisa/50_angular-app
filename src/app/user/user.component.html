@@ -1,0 +1,16 @@
+<div class="body">
+  <div class="picture">
+    <img [src]="avatarUrl">
+  </div>
+
+  <div class="user">
+    <h2>{{name}}</h2>
+    <div class="user-status">{{status}}</div>
+  </div>
+
+  <button type="button" (click)="onRemoveUser()" *ngIf="name">
+    Remove user
+  </button>
+
+
+</div>
